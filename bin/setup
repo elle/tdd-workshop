@@ -1,25 +1,28 @@
-#!/usr/bin/env ruby
-require "fileutils"
+#!/bin/sh
 
-# path to your application root.
-APP_ROOT = File.expand_path("..", __dir__)
+# Set up Rails app.
+# Run this script immediately after cloning the codebase.
+# https://thoughtbot.com/blog/bin-setup
 
-def system!(*args)
-  system(*args) || abort("\n== Command #{args} failed ==")
-end
+# Set up Ruby dependencies
+bundle install
 
-FileUtils.chdir APP_ROOT do
-  # This script is a way to set up or update your development environment automatically.
-  # This script is idempotent, so that you can run it at any time and get an expectable outcome.
-  # Add necessary setup steps to this file.
+# Install Homebrew dependencies
+# if [ -x "$(command -v brew)" ]; then
+#   brew bundle
+# fi
 
-  puts "== Installing dependencies =="
-  system! "gem install bundler --conservative"
-  system("bundle check") || system!("bundle install")
+yarn install
 
-  puts "\n== Removing old logs and tempfiles =="
-  system! "bin/rails log:clear tmp:clear"
+# Set up database
+# bundle exec rake dev:prime
+bundle exec rails db:setup
+bundle exec rails log:clear tmp:clear
 
-  puts "\n== Restarting application server =="
-  system! "bin/rails restart"
-end
+# Set up configurable environment variables for Foreman
+if [ ! -f .env.local ]; then
+  cp .env.example .env.local
+fi
+
+# Remove pre-existing Active Storage uploads
+# rm -rf storage
