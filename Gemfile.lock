@@ -253,6 +253,8 @@ GEM
       sprockets-rails
       tilt
     sexp_processor (4.16.1)
+    shoulda-matchers (5.1.0)
+      activesupport (>= 5.2.0)
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -319,6 +321,7 @@ DEPENDENCIES
   responders (~> 3.0)
   rspec-rails (= 5.1.2)
   sassc-rails
+  shoulda-matchers (~> 5.0)
   simple_form
   spring
   sprockets-rails

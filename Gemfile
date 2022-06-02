@@ -31,7 +31,6 @@ group :development, :test do
   gem "hirb"
   gem "pry-byebug"
   gem "rspec-rails", "5.1.2"
-  gem "webmock"
 end
 
 group :development do
@@ -39,3 +38,7 @@ group :development do
   gem "web-console"
 end
 
+group :test do
+  gem "shoulda-matchers", "~> 5.0"
+  gem "webmock"
+end
