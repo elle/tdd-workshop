@@ -27,6 +27,7 @@ group :development, :test do
   # gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "awesome_print"
   gem "dotenv-rails"
+  gem "factory_bot_rails"
   gem "hirb"
   gem "pry-byebug"
   gem "rspec-rails", "5.1.2"
