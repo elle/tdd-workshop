@@ -29,6 +29,7 @@ group :development, :test do
   gem "dotenv-rails"
   gem "hirb"
   gem "pry-byebug"
+  gem "rspec-rails", "5.1.2"
 end
 
 group :development do
