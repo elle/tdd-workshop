@@ -31,6 +31,7 @@ group :development, :test do
   gem "hirb"
   gem "pry-byebug"
   gem "rspec-rails", "5.1.2"
+  gem "webmock"
 end
 
 group :development do
