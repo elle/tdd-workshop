@@ -109,6 +109,10 @@ GEM
     crass (1.0.6)
     css_parser (1.11.0)
       addressable
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     diff-lcs (1.5.0)
     digest (3.1.0)
     domain_name (0.5.20190701)
@@ -305,6 +309,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bootsnap
+  database_cleaner-active_record
   dotenv-rails
   email_validator (= 1.6.0)
   factory_bot_rails
