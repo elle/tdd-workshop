@@ -141,6 +141,10 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    email_spec (2.2.0)
+      htmlentities (~> 4.3.3)
+      launchy (~> 2.1)
+      mail (~> 2.7)
     email_validator (1.6.0)
       activemodel
     erubi (1.10.0)
@@ -193,6 +197,8 @@ GEM
       railties (>= 6.0.0)
     launchy (2.5.0)
       addressable (~> 2.7)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     llhttp-ffi (0.4.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
@@ -349,6 +355,7 @@ DEPENDENCIES
   cuprite
   database_cleaner-active_record
   dotenv-rails
+  email_spec
   email_validator (= 1.6.0)
   factory_bot_rails
   haml-rails
@@ -356,6 +363,7 @@ DEPENDENCIES
   http
   importmap-rails
   launchy
+  letter_opener
   net-http
   pg
   premailer-rails

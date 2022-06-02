@@ -36,6 +36,7 @@ end
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
+  gem "letter_opener"
   gem "spring"
   gem "web-console"
 end
@@ -43,6 +44,7 @@ end
 group :test do
   gem "cuprite"
   gem "database_cleaner-active_record"
+  gem "email_spec"
   gem "launchy"
   gem "rails-controller-testing"
   gem "shoulda-matchers", "~> 5.0"
