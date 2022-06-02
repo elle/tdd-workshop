@@ -42,6 +42,7 @@ group :test do
   gem "cuprite"
   gem "database_cleaner-active_record"
   gem "launchy"
+  gem "rails-controller-testing"
   gem "shoulda-matchers", "~> 5.0"
   gem "webmock"
 end
