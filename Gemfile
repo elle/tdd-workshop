@@ -7,6 +7,7 @@ gem "rails", github: "rails/rails", branch: "main"
 
 gem "bootsnap", require: false
 gem "email_validator", "1.6.0"
+gem "good_job"
 gem "haml-rails"
 gem "http"
 gem "importmap-rails"
