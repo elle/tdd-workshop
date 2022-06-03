@@ -1,24 +1,14 @@
-# README
+# TDD Workshop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a skeleton app for the workshop.
 
-Things you may want to cover:
+### Requirements
 
-* Ruby version
+- Recent version of Ruby installed
+- Recent version of Postgresql installed
 
-* System dependencies
+### Getting started
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone the repo
+2. `cd tdd-workshop`
+3. `./bin/setup`
