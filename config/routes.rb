@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount GoodJob::Engine => "good_job"
+  resource :dashboard, only: [:show]
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root "dashboard#show"
 end
