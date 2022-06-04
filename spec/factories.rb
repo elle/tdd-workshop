@@ -8,6 +8,10 @@ FactoryBot.define do
   factory :person, aliases: [:user] do
     first_name { "John" }
     sequence(:email) { |n| "user_#{n}@example.com" }
+
+    factory :admin do
+      admin { true }
+    end
   end
 
   factory :post do

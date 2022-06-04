@@ -1,0 +1,17 @@
+%h1= @person.full_name
+
+%p
+  First name:
+  = @person.first_name
+%p
+  Last name:
+  = @person.last_name
+%p
+  Email:
+  = @person.email
+%p
+  Admin:
+  - if @person.admin?
+    yes
+  - else
+    no
