@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :confirmations, only: [:new]
   resource :dashboard, only: [:show]
+  resources :people, only: [:create, :new, :show]
   resources :posts, only: [:show]
   resources :sessions, only: [:new, :create]
 

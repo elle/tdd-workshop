@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def admin?
+    current_user.admin?
+  end
+
   def current_user
     if person_id
       @current_user ||= Person.find(person_id)
@@ -27,6 +31,12 @@ class ApplicationController < ActionController::Base
 
   def require_login
     unless logged_in?
+      deny_access
+    end
+  end
+
+  def require_admin
+    unless logged_in? && admin?
       deny_access
     end
   end
