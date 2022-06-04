@@ -4,7 +4,7 @@ module AuthenticationHelpers
 
     within "form" do
       fill_in :session_email, with: user.email
-      click_on "Log in"
+      click_on t("sessions.new.log_in")
     end
   end
 end
