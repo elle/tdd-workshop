@@ -1,28 +1,19 @@
 %h1
-  = @post.title
+  = @post_presenter.title
 
-- if @post.description
-  %h3 Description
-  %p
-    = @post.description
-
-= @post.body
-
-%p
-  Written by
-  = @post.person.first_name
+= @post_presenter.intro
+= @post_presenter.body
+= @post_presenter.written_by
 
 %p
   %small
-    - if @post.published_on && @post.published_on <= Date.current
-      Published on
-      = l(@post.published_on, format: :short)
+    = @post_presenter.published_date
 
 %h3 Comments
 
-- if @post.comments.any?
+- if @post_presenter.comments.any?
   %ol
-    - @post.comments.each do |comment|
+    - @post_presenter.comments.each do |comment|
       %li
         = comment.body
 
