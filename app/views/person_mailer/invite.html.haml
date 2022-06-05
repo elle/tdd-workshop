@@ -1,0 +1,8 @@
+%h1
+  Hi
+  = @person.first_name
+
+%p
+  = t("user_mailer.invite.body",
+      confirmation_url: new_confirmation_url(token: @person.token),
+      )
