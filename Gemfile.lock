@@ -209,6 +209,10 @@ GEM
     importmap-rails (1.1.0)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    jsonapi-resources (0.10.7)
+      activerecord (>= 4.1)
+      concurrent-ruby
+      railties (>= 4.1)
     launchy (2.5.0)
       addressable (~> 2.7)
     letter_opener (1.8.1)
@@ -379,6 +383,7 @@ DEPENDENCIES
   hirb
   http
   importmap-rails
+  jsonapi-resources
   launchy
   letter_opener
   net-http
