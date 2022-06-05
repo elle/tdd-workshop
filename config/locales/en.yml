@@ -5,6 +5,9 @@ en:
       log_out: Log out
   flash:
     unauthorised: Unauthorised
+  person_mailer:
+    invite:
+      subject: You're invited
   sessions:
     new:
       log_in: Log in
