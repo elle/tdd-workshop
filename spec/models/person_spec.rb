@@ -9,13 +9,26 @@ RSpec.describe Person do
     # has_many posts, dependent
   end
 
-  describe "admin" do
+  describe "#admin" do
     # defaults to false, otherwise returns true
   end
 
-  describe "full_name" do
+  describe "#full_name" do
     # when only first name is present -> returns first_name
     # when both first and last, returns both
     # returns a titleized full name
+  end
+
+  describe "#confirmed?" do
+    # when present -> returns true
+    # when nil -> returns false
+  end
+
+  describe "#set_token" do
+    context "on initialize" do
+      it "sets a random token" do
+        expect(Person.new.token).to be_present
+      end
+    end
   end
 end
