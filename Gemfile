@@ -22,6 +22,7 @@ gem "simple_form"
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
+gem "twilio-ruby"
 gem "tzinfo-data"
 # gem "bcrypt", "~> 3.1.7"
 
