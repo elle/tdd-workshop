@@ -2,7 +2,8 @@ class PeopleController < ApplicationController
   before_action :require_admin, except: :show
 
   def create
-    @person = Person.create(person_params)
+    @person = CreateAndWelcomeUser.call(person_params)
+
     respond_with @person
   end
 

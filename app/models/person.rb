@@ -11,9 +11,9 @@ class Person < ApplicationRecord
     [first_name, last_name].compact.join(" ").titleize
   end
 
-  def invite
-    InviteUserJob.perform_later(id)
-  end
+  # def invite
+  #   InviteUserJob.perform_later(id)
+  # end
   # Job.perform_later -> queues the job (super fast)
   # web worker that is listening
   # once it sees the job in the queue, it grabs it
