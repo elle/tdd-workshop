@@ -1,0 +1,6 @@
+%h1 Create a new post
+
+= simple_form_for @post do |f|
+  = f.input :title
+  = f.input :body
+  = f.submit "Publish"
