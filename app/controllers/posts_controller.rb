@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :require_login, expect: [:show]
+  before_action :require_login, except: [:show]
 
   def create
     @post = Post.create(
